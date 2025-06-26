@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Scholar - Online School HTML5 Template {% endblock %}
+
+<!-- Bootstrap core CSS -->
+{% block bootstarp_css_files %}
+  <link href="{% static 'indexapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+{% endblock %}
+
+<!-- Additional CSS Files -->
+{% block additional_css_files %}
+  <link rel="stylesheet" href="{% static 'indexapp/assets/css/fontawesome.css' %}">
+  <link rel="stylesheet" href="{% static 'indexapp/assets/css/templatemo-scholar.css' %}">
+  <link rel="stylesheet" href="{% static 'indexapp/assets/css/fontawesome.css' %}">
+  <link rel="stylesheet" href="{% static 'indexapp/assets/css/owl.css' %}">
+  <link rel="stylesheet" href="{% static 'indexapp/assets/css/animate.css' %}">
+  <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+{% endblock %}
+
+{% block content %}
+<!-- ***** Preloader Start ***** -->
+{% comment %} {% include "indexapp/includes/preloader.html" %} {% endcomment %}
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Header Area Start ***** -->
+{% include "indexapp/includes/header.html" %}
+<!-- ***** Header Area End ***** -->
+
+<!-- ***** Main Banner ***** -->
+{% include "indexapp/includes/main-banner.html" %}
+<!-- ***** Main Banner End ***** -->
+
+<!-- ***** Service Section ***** -->
+{% include "indexapp/includes/service-section.html" %}
+<!-- ***** Service Section End ***** -->
+
+<!-- *****  About ***** -->
+{% include "indexapp/includes/about.html" %}
+<!-- ***** About End ***** -->
+
+<!-- *****  Courses ***** -->
+{% include "indexapp/includes/courses.html" %}
+<!-- ***** Courses End ***** -->
+
+<!-- *****  Fun-Fact ***** -->
+{% include "indexapp/includes/fun-fact.html" %}
+<!-- ***** Fun-Fact End ***** -->
+
+<!-- *****  Team ***** -->
+{% include "indexapp/includes/team.html" %}
+<!-- ***** Team End ***** -->
+
+<!-- *****  Testimonials ***** -->
+{% include "indexapp/includes/testimonials.html" %}
+<!-- ***** Testimonials End ***** -->
+
+<!-- *****  Events ***** -->
+{% include "indexapp/includes/events.html" %}
+<!-- ***** Events End ***** -->
+
+<!-- *****  Contact ***** -->
+{% include "indexapp/includes/contact.html" %}
+<!-- ***** Contact End ***** -->
+
+
+<!-- ***** Footer Area Start ***** -->
+{% include "indexapp/includes/footer.html" %}
+<!-- ***** Footer Area End ***** -->
+
+
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<link rel="stylesheet" href="{% static 'indexapp/assets/css/fontawesome.css' %}">
+
+<script src="{% static 'indexapp/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'indexapp/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'indexapp/assets/js/isotope.min.js' %}"></script>
+<script src="{% static 'indexapp/assets/js/owl-carousel.js' %}"></script>
+<script src="{% static 'indexapp/assets/js/counter.js' %}"></script>
+<script src="{% static 'indexapp/assets/js/custom.js' %}"></script>
+
+{% endblock %}
