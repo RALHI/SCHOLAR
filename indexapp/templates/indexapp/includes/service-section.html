@@ -1,29 +1,24 @@
 {% load static%}
 <div class="services section" id="services">
-      <div class="container">
+    <div class="container">
         <div class="row">
-          {% if service %}
-            {% for item in service %}
-              <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                  <div class="icon">
-                    <img src="{% static 'indexapp/assets/images/service-01.png' %}" alt="online degrees">
-                    {% comment %} <img src="assets/images/service-01.png" alt="online degrees"> {% endcomment %}
-                  </div>
-                  <div class="main-content">
-                    <h4>{{item.servicename}}</h4>
-                    <p>{{item.content}}</p>
-                    <div class="main-button">
-                      <a href="#">Read More</a>
-                    </div>
+          {% for item in service %}
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'indexapp/assets/images/service-01.png' %}" alt="online degrees">
+                  {% comment %} <img src="assets/images/service-01.png" alt="online degrees"> {% endcomment %}
+                </div>
+                <div class="main-content">
+                  <h4>{{item.servicename}}</h4>
+                  <p>{{item.content}}</p>
+                  <div class="main-button">
+                    <a href="#">Read More</a>
                   </div>
                 </div>
               </div>
-            {% endfor %}
-          {% else %}
-            <p>No services available.</p>
-          {% endif %}
-          </div>
+            </div>
+          {% endfor %}
         </div>
-      </div>
     </div>
+</div>
