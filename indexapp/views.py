@@ -45,10 +45,46 @@ banner_content = [
   },  
 ]
 
+team = [
+  {
+    "image" : "member-01.jpg",
+    "category" : "UX Teacher",
+    "name" : "Sophia Rose",
+    "facebook_url" : None,
+    "twitter_url" : None,
+    "linkdin_url" : None
+  },
+  {
+    "image" : "member-02.jpg",
+    "category" : "Graphic Teacher",
+    "name" : "Cindy Walker",
+    "facebook_url" : None,
+    "twitter_url" : None,
+    "linkdin_url" : None
+  },
+  {
+    "image" : "member-03.jpg",
+    "category" : "Full Stack Master",
+    "name" : "David Hutson",
+    "facebook_url" : None,
+    "twitter_url" : None,
+    "linkdin_url" : None
+  },
+  {
+    "image" : "member-04.jpg",
+    "category" : "Digital Animator",
+    "name" : "Stella Blair",
+    "facebook_url" : None,
+    "twitter_url" : None,
+    "linkdin_url" : None
+  },
+]
+
 def index(request):
   data = {
     "nav_items" : nav_buttons,
     "banner" : banner_content,
     "service" : services,
+    "team" : team
   }
   return render(request, "indexapp/index.html", data)
