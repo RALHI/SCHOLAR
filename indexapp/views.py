@@ -80,11 +80,20 @@ team = [
   },
 ]
 
+
+course_filter = {
+  "*" : "Show All",
+  "design" : "Webdesign",
+  "development" : "Development",
+  "wordpress" : "Wordpress"  
+}
+
 def index(request):
   data = {
     "nav_items" : nav_buttons,
     "banner" : banner_content,
     "service" : services,
-    "team" : team
+    "team" : team,
+    "coursefilter" : course_filter
   }
   return render(request, "indexapp/index.html", data)
