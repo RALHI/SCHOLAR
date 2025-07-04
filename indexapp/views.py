@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Service
 
 nav_buttons = {
   "top" : "Home",
@@ -9,20 +10,20 @@ nav_buttons = {
   "contact" : "Register Now",
 }
 
-services = [
-  {
-    "servicename" : "Online Degrees",
-    "content" : "Whenever you need free templates in HTML CSS, you just remember TemplateMo website."
-  },
-  {
-    "servicename" : "Short Courses",
-    "content" : "You can browse free templates based on different tags such as digital marketing, etc."
-  },
-  {
-    "servicename" : "Web Experts",
-    "content" : "You can start learning HTML CSS by modifying free templates from our website too."
-  },
-]
+# services = [
+#   {
+#     "servicename" : "Online Degrees",
+#     "content" : "Whenever you need free templates in HTML CSS, you just remember TemplateMo website."
+#   },
+#   {
+#     "servicename" : "Short Courses",
+#     "content" : "You can browse free templates based on different tags such as digital marketing, etc."
+#   },
+#   {
+#     "servicename" : "Web Experts",
+#     "content" : "You can start learning HTML CSS by modifying free templates from our website too."
+#   },
+# ]
 
 banner_content = [
   {
@@ -89,11 +90,17 @@ course_filter = {
 }
 
 def index(request):
-  data = {
+  # data = {
+  #   "nav_items" : nav_buttons,
+  #   "banner" : banner_content,
+  #   "service" : services,
+  #   "team" : team,
+  #   "coursefilter" : course_filter
+  # }
+  return render(request, "indexapp/index.html", {
     "nav_items" : nav_buttons,
     "banner" : banner_content,
-    "service" : services,
+    "service" : Service.objects.all(),  # Fetching services from the database
     "team" : team,
     "coursefilter" : course_filter
-  }
-  return render(request, "indexapp/index.html", data)
+  })

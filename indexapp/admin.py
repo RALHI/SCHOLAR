@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ('servicename', 'content')
+    search_fields = ('servicename',)
+
+admin.site.register(Service, ServiceAdmin)
