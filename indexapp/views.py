@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Service
+from .models import *
 
 nav_buttons = {
   "top" : "Home",
@@ -101,6 +101,6 @@ def index(request):
     "nav_items" : nav_buttons,
     "banner" : banner_content,
     "service" : Service.objects.all(),  # Fetching services from the database
-    "team" : team,
+    "team" : Team.objects.all(),  # Fetching team members from the database
     "coursefilter" : course_filter
   })
