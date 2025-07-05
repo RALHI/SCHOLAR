@@ -9,7 +9,7 @@ class Team(models.Model):
     linkedin_url = models.URLField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.name} - {self.category}"
+        return f"{self.name}"
 
 class Service(models.Model):
     servicename = models.CharField(max_length=100)
@@ -31,4 +31,19 @@ class UpcomingEvents(models.Model):
 
     class Meta:
         verbose_name_plural = "Upcoming Events"
+        
+
+class LatestCourses(models.Model):
+    image = models.CharField(max_length=100)
+    category = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    author = models.ForeignKey(Team, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
+    course_id = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = "Latest Courses"
         

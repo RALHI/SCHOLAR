@@ -46,40 +46,40 @@ banner_content = [
   },  
 ]
 
-team = [
-  {
-    "image" : "member-01.jpg",
-    "category" : "UX Teacher",
-    "name" : "Sophia Rose",
-    "facebook_url" : None,
-    "twitter_url" : None,
-    "linkdin_url" : None
-  },
-  {
-    "image" : "member-02.jpg",
-    "category" : "Graphic Teacher",
-    "name" : "Cindy Walker",
-    "facebook_url" : None,
-    "twitter_url" : None,
-    "linkdin_url" : None
-  },
-  {
-    "image" : "member-03.jpg",
-    "category" : "Full Stack Master",
-    "name" : "David Hutson",
-    "facebook_url" : None,
-    "twitter_url" : None,
-    "linkdin_url" : None
-  },
-  {
-    "image" : "member-04.jpg",
-    "category" : "Digital Animator",
-    "name" : "Stella Blair",
-    "facebook_url" : None,
-    "twitter_url" : None,
-    "linkdin_url" : None
-  },
-]
+# team = [
+#   {
+#     "image" : "member-01.jpg",
+#     "category" : "UX Teacher",
+#     "name" : "Sophia Rose",
+#     "facebook_url" : None,
+#     "twitter_url" : None,
+#     "linkdin_url" : None
+#   },
+#   {
+#     "image" : "member-02.jpg",
+#     "category" : "Graphic Teacher",
+#     "name" : "Cindy Walker",
+#     "facebook_url" : None,
+#     "twitter_url" : None,
+#     "linkdin_url" : None
+#   },
+#   {
+#     "image" : "member-03.jpg",
+#     "category" : "Full Stack Master",
+#     "name" : "David Hutson",
+#     "facebook_url" : None,
+#     "twitter_url" : None,
+#     "linkdin_url" : None
+#   },
+#   {
+#     "image" : "member-04.jpg",
+#     "category" : "Digital Animator",
+#     "name" : "Stella Blair",
+#     "facebook_url" : None,
+#     "twitter_url" : None,
+#     "linkdin_url" : None
+#   },
+# ]
 
 
 course_filter = {
@@ -103,5 +103,6 @@ def index(request):
     "service" : Service.objects.all(),  # Fetching services from the database
     "team" : Team.objects.all(),  # Fetching team members from the database
     "coursefilter" : course_filter,
+    "latestcourse" : LatestCourses.objects.all(),  # Fetching latest courses from the database
     "events" : UpcomingEvents.objects.all()  # Fetching upcoming events from the database
   })
