@@ -100,9 +100,13 @@ def index(request):
   return render(request, "indexapp/index.html", {
     "nav_items" : nav_buttons,
     "banner" : banner_content,
-    "service" : Service.objects.all(),  # Fetching services from the database
-    "team" : Team.objects.all(),  # Fetching team members from the database
+    "service" : Service.objects.all(),  
+    # Fetching services from the database
+    "team" : Team.objects.all(),  
+    # Fetching team members from the database
     "coursefilter" : course_filter,
-    "latestcourse" : LatestCourses.objects.all(),  # Fetching latest courses from the database
-    "events" : UpcomingEvents.objects.all()  # Fetching upcoming events from the database
+    "latestcourse" : LatestCourses.objects.all(),  
+    # Fetching latest courses from the database
+    "events" : UpcomingEvents.objects.all()  
+    # Fetching upcoming events from the database
   })
