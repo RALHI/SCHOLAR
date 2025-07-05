@@ -17,3 +17,18 @@ class Service(models.Model):
 
     def __str__(self):
         return self.servicename
+    
+
+class UpcomingEvents(models.Model):
+    cateory = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    date = models.DateField()
+    time = models.TimeField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = "Upcoming Events"
+        

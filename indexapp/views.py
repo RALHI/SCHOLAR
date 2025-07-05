@@ -102,5 +102,6 @@ def index(request):
     "banner" : banner_content,
     "service" : Service.objects.all(),  # Fetching services from the database
     "team" : Team.objects.all(),  # Fetching team members from the database
-    "coursefilter" : course_filter
+    "coursefilter" : course_filter,
+    "events" : UpcomingEvents.objects.all()  # Fetching upcoming events from the database
   })
